@@ -1,4 +1,4 @@
-# Everfi Backgrounding
+# **Everfi Backgrounding**
 
 ### For this background system, I had Claude help make a dossier analyzing Everfi's whole business history.
 
