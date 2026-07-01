@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EverFi, Inc. — Company Background Dossier</title>
+<meta name="description" content="Investigative background file on EverFi, Inc.: corporate structure, financial history, business model, and government connections.">
+<style>
+  :root {
+    --bg:        #0B1320;
+    --surface:   #111D2E;
+    --surface2:  #162033;
+    --surface3:  #1B2840;
+    --border:    #243350;
+    --border-lt: #2E4060;
+    --gold:      #C4903A;
+    --gold-dim:  #6B4E1A;
+    --text:      #D8D3C8;
+    --text-dim:  #8EA4BD;
+    --red:       #C0422E;
+    --red-dim:   #5A1F14;
+    --green:     #2E6645;
+    --green-txt: #4EAD78;
+    --amber-txt: #D4A044;
+    --mono:      'Courier New', Courier, monospace;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { font-size: 16px; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-size: 0.9375rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Layout ── */
+  .page {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 1.5rem 4rem;
+  }
+
+  /* ── Case File Header ── */
+  .case-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--gold-dim);
+    margin-bottom: 2.5rem;
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    color: var(--text-dim);
+  }
+  .case-header .case-id { color: var(--gold); font-weight: 700; }
+
+  /* ── Hero ── */
+  .hero {
+    margin-bottom: 2rem;
+  }
+  .hero-eyebrow {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 0.5rem;
+  }
+  .hero-name {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    font-style: italic;
+    color: #E8E2D6;
+    margin-bottom: 0.4rem;
+  }
+  .hero-subname {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-size: clamp(0.85rem, 2vw, 1rem);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 1rem;
+  }
+  .hero-rule {
+    height: 2px;
+    background: linear-gradient(to right, var(--gold), var(--gold-dim) 60%, transparent);
+    margin-bottom: 1.2rem;
+  }
+
+  /* ── Status badges ── */
+  .badges {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+  .badge {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    padding: 0.25rem 0.6rem;
+    border: 1px solid;
+    text-transform: uppercase;
+  }
+  .badge-sold   { border-color: var(--red);      color: var(--red);      background: var(--red-dim); }
+  .badge-active { border-color: var(--green);    color: var(--green-txt); background: #0E2218; }
+  .badge-flag   { border-color: var(--gold-dim); color: var(--amber-txt); background: #1E1406; }
+
+  /* ── Entity overview grid ── */
+  .entity-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    border: 1px solid var(--border);
+    margin-bottom: 2.5rem;
+    background: var(--border);
+  }
+  .entity-grid > * { background: var(--surface); }
+
+  .entity-col {
+    padding: 1.25rem 1.4rem;
+  }
+  .entity-col-title {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+  .entity-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 0.22rem 0;
+    border-bottom: 1px solid rgba(36,51,80,0.5);
+    font-size: 0.84rem;
+  }
+  .entity-row:last-child { border-bottom: none; }
+  .entity-label {
+    color: var(--text-dim);
+    font-size: 0.78rem;
+    flex-shrink: 0;
+  }
+  .entity-value {
+    text-align: right;
+    font-family: var(--mono);
+    font-size: 0.82rem;
+    color: var(--text);
+  }
+  .entity-value.highlight { color: var(--amber-txt); }
+  .entity-value.red       { color: var(--red); }
+  .entity-value.green     { color: var(--green-txt); }
+
+  /* ── Sections ── */
+  .section {
+    margin-bottom: 3rem;
+  }
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.4rem;
+    margin-bottom: 1.25rem;
+  }
+  .section-code {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    color: var(--gold);
+    flex-shrink: 0;
+    padding-top: 0.1rem;
+  }
+  .section-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #C8C2B6;
+  }
+  .section-sources {
+    margin-left: auto;
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    color: var(--text-dim);
+    letter-spacing: 0.06em;
+    flex-shrink: 0;
+  }
+
+  /* ── Prose ── */
+  p {
+    margin-bottom: 0.9rem;
+    max-width: 72ch;
+  }
+  p:last-child { margin-bottom: 0; }
+
+  .lede {
+    font-size: 1rem;
+    color: #C8C2B6;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+    max-width: 72ch;
+  }
+
+  /* ── Data tables ── */
+  .table-wrap { overflow-x: auto; margin-bottom: 1.25rem; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+    font-family: var(--mono);
+  }
+  thead tr {
+    background: var(--surface3);
+    border-bottom: 1px solid var(--gold-dim);
+  }
+  th {
+    text-align: left;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    white-space: nowrap;
+    font-weight: 600;
+  }
+  td {
+    padding: 0.45rem 0.75rem;
+    border-bottom: 1px solid rgba(36,51,80,0.5);
+    vertical-align: top;
+    line-height: 1.4;
+    color: var(--text);
+  }
+  tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: rgba(27,40,64,0.5); }
+  td.num { font-variant-numeric: tabular-nums; text-align: right; }
+  td.status-active { color: var(--green-txt); }
+  td.status-inactive { color: var(--text-dim); }
+  td.status-flag { color: var(--amber-txt); }
+
+  /* ── Chart canvas wrapper ── */
+  .chart-wrapper {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .chart-title {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+  canvas { display: block; width: 100%; }
+
+  /* ── Callout box ── */
+  .callout {
+    border-left: 3px solid var(--gold);
+    background: var(--surface2);
+    padding: 0.9rem 1.1rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.875rem;
+    max-width: 66ch;
+  }
+  .callout-red { border-color: var(--red); }
+  .callout cite {
+    display: block;
+    margin-top: 0.4rem;
+    font-style: normal;
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    color: var(--text-dim);
+    letter-spacing: 0.06em;
+  }
+
+  /* ── Flag list ── */
+  .flag-list {
+    display: grid;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    margin-bottom: 1.25rem;
+  }
+  .flag-item {
+    display: grid;
+    grid-template-columns: 6rem 4rem 1fr;
+    gap: 0;
+    background: var(--surface);
+    align-items: start;
+  }
+  .flag-label, .flag-sev, .flag-desc {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.8rem;
+    border-right: 1px solid var(--border);
+  }
+  .flag-desc { border-right: none; }
+  .flag-label {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    color: var(--amber-txt);
+    letter-spacing: 0.04em;
+  }
+  .flag-sev {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+  }
+  .sev-high   { color: var(--red); }
+  .sev-medium { color: var(--amber-txt); }
+  .sev-low    { color: var(--green-txt); }
+
+  /* ── Footnotes ── */
+  .footnotes-section {
+    border-top: 1px solid var(--border);
+    padding-top: 1.5rem;
+    margin-top: 3rem;
+  }
+  .footnotes-title {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+  .footnotes-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem 2rem;
+  }
+  .fn-item {
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    gap: 0.3rem;
+    font-size: 0.74rem;
+    align-items: start;
+  }
+  .fn-num {
+    font-family: var(--mono);
+    color: var(--gold);
+    font-size: 0.7rem;
+    text-align: right;
+    padding-top: 0.05rem;
+  }
+  .fn-text { color: var(--text-dim); line-height: 1.4; }
+  .fn-text a {
+    color: var(--text-dim);
+    text-decoration: underline;
+    text-decoration-color: var(--gold-dim);
+    word-break: break-all;
+  }
+  .fn-text a:hover { color: var(--gold); }
+  .fn-type {
+    display: inline;
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    padding: 0.05rem 0.3rem;
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    margin-right: 0.3rem;
+    vertical-align: middle;
+  }
+
+  sup {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    color: var(--gold);
+    cursor: default;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 640px) {
+    .entity-grid { grid-template-columns: 1fr; }
+    .flag-item { grid-template-columns: 1fr; }
+    .flag-sev { border-right: none; }
+    .footnotes-list { grid-template-columns: 1fr; }
+    .case-header { flex-direction: column; gap: 0.2rem; align-items: flex-start; }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .hero-rule { transition: opacity 0.3s; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ── Case file header ── -->
+  <header class="case-header">
+    <span class="case-id">CASE FILE EVF-2026-001</span>
+    <span>RETRIEVED 2026-06-30 &nbsp;|&nbsp; SOURCES 31 &nbsp;|&nbsp; LAST UPDATED 2026-06-30</span>
+  </header>
+
+  <!-- ── Hero ── -->
+  <div class="hero">
+    <div class="hero-eyebrow">Company Background Dossier &nbsp;/&nbsp; EdTech / Social Impact Technology</div>
+    <h1 class="hero-name">EverFi, Inc.</h1>
+    <div class="hero-subname">formerly EverFi LLC &nbsp;·&nbsp; Washington, DC &nbsp;·&nbsp; est. 2008 &nbsp;·&nbsp; Delaware corp.</div>
+    <div class="hero-rule"></div>
+    <div class="badges">
+      <span class="badge badge-sold">SOLD 2024 — Nominal Amount</span>
+      <span class="badge badge-active">Active: CA · CO · FL · MO · OH · PA · WV</span>
+      <span class="badge badge-flag">$415M Impairment Charge</span>
+      <span class="badge badge-flag">NAICS 611710 — Educational Support Services</span>
+    </div>
+  </div>
+
+  <!-- ── Entity overview cards ── -->
+  <div class="entity-grid">
+    <div class="entity-col">
+      <div class="entity-col-title">Corporate Identity</div>
+      <div class="entity-row"><span class="entity-label">Legal name</span><span class="entity-value">EVERFI, INC.</span></div>
+      <div class="entity-row"><span class="entity-label">Formation</span><span class="entity-value">2008-01-17 (Delaware)</span></div>
+      <div class="entity-row"><span class="entity-label">DE file no.</span><span class="entity-value">4489432</span></div>
+      <div class="entity-row"><span class="entity-label">NAICS</span><span class="entity-value">611710</span></div>
+      <div class="entity-row"><span class="entity-label">EIN / Federal Tax ID</span><span class="entity-value highlight">26-1818856<sup>[fn:22,26]</sup></span></div>
+      <div class="entity-row"><span class="entity-label">State registrations</span><span class="entity-value">19 states</span></div>
+      <div class="entity-row"><span class="entity-label">DC license</span><span class="entity-value">Active (2300 N St NW)</span></div>
+      <div class="entity-row"><span class="entity-label">Reg. agent</span><span class="entity-value">Corporation Service Co.</span></div>
+      <div class="entity-row"><span class="entity-label">Post-acquisition HQ</span><span class="entity-value">Charleston, SC</span></div>
+    </div>
+    <div class="entity-col">
+      <div class="entity-col-title">Financial Markers</div>
+      <div class="entity-row"><span class="entity-label">VC raised (total)</span><span class="entity-value highlight">$251M+</span></div>
+      <div class="entity-row"><span class="entity-label">Higher ed unit sold</span><span class="entity-value">$100M (2021)</span></div>
+      <div class="entity-row"><span class="entity-label">Acquired by Blackbaud</span><span class="entity-value highlight">$750M (Jan 2022)</span></div>
+      <div class="entity-row"><span class="entity-label">2022 revenue (proj.)</span><span class="entity-value">~$120M</span></div>
+      <div class="entity-row"><span class="entity-label">Revenue change (Blackbaud era)</span><span class="entity-value red">−26%</span></div>
+      <div class="entity-row"><span class="entity-label">Impairment charge</span><span class="entity-value red">−$415M</span></div>
+      <div class="entity-row"><span class="entity-label">Sold by Blackbaud</span><span class="entity-value red">Nominal (Dec 2024)</span></div>
+      <div class="entity-row"><span class="entity-label">Value destruction est.</span><span class="entity-value red">~$700M+</span></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- §01 BACKGROUND -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-code">§ 01</span>
+      <span class="section-title">Background &amp; Business Model</span>
+      <span class="section-sources">Sources: fn:7,9,13,14,18</span>
+    </div>
+
+    <p class="lede">EverFi pioneered a model it called "Impact-as-a-Service": corporations — mainly banks, credit unions, and insurance companies — pay EverFi to place ostensibly free digital curriculum inside K-12 classrooms. Students receive financial literacy lessons; banks receive branded content delivery, community reinvestment credit, and access to students and families as a future customer base.</p>
+
+    <p>Founded in 2008 by Tom Davidson and Jon Chapman in a Georgetown apartment, EverFi grew from a single financial literacy product into a multi-vertical education technology platform serving three distinct markets: K-12 schools (bank-sponsored financial literacy), higher education (mandatory compliance training for alcohol awareness and sexual assault prevention), and corporate clients (workplace ethics and compliance training).</p>
+
+    <div class="callout">
+      "Financial institutions typically pay EverFi for the software, and then underwrite its offering in public schools. It's good advertising and PR for banks, credit unions, and insurance companies that sponsor these programs."
+      <cite>— The American Prospect, "As Consumer Protections Dwindle, Schools Push Financial Literacy" <sup>[fn:13]</sup></cite>
+    </div>
+
+    <p>By the time Blackbaud acquired the company in 2022, EverFi claimed to have reached over 45 million learners globally. Its K-12 programs operated in more than 21,000 schools and 7,000 school districts. The sponsorship partners included Capital One (branding its curriculum "Modern Money"<sup>[fn:18]</sup>), SouthEast Bank, Edward Jones, MassMutual, and dozens of regional banks and credit unions.<sup>[fn:14]</sup></p>
+
+    <p>The higher education division — which included AlcoholEdu (the largest online course in higher education, per the company) and Haven (sexual assault prevention, used at more than 400 institutions) — was carved out and sold to Vector Solutions in July 2021 for $100 million before the Blackbaud deal closed.<sup>[fn:17]</sup> These programs were sold to universities as Title IX and Clery Act compliance tools; critics questioned whether online completion rates translated into behavioral outcomes.<sup>[fn:15]</sup></p>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- §02 CORPORATE STRUCTURE -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-code">§ 02</span>
+      <span class="section-title">Corporate Structure &amp; State Registrations</span>
+      <span class="section-sources">Sources: fn:1,2,5,20–23,26</span>
+    </div>
+
+    <p>EverFi, Inc. was incorporated in Delaware on January 17, 2008 (file #4489432). At its peak the company maintained active registrations in at least 19 states, coordinated through Corporation Service Company as registered agent. Following the Blackbaud acquisition, a number of state registrations — including both DC registrations — were revoked, and the company's listed headquarters shifted from Washington, DC to Blackbaud's home base in Charleston, SC.<sup>[fn:1,20]</sup> OpenCorporates documents the Delaware registration (us_de/4489432) and the Florida foreign corporation filing (us_fl/F18000005152, EIN 26-1818856);<sup>[fn:21,22]</sup> web authentication was required to retrieve full officer and filing arrays, and the API returned 401 this session.<sup>[fn:23]</sup></p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>State</th><th>Type</th><th>Status</th><th>File #</th><th>Issued</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>DE</td><td>Domestic</td><td class="status-flag">Unknown</td><td>4489432</td><td>2008-01-17</td></tr>
+          <tr><td>OH</td><td>Foreign</td><td class="status-active">Active</td><td>2434825</td><td>2015-10-05</td></tr>
+          <tr><td>CO</td><td>Foreign (LLC)</td><td class="status-active">Active – Good Standing</td><td>20161486228</td><td>2016-07-21</td></tr>
+          <tr><td>CA</td><td>Foreign</td><td class="status-active">Active</td><td>4112409</td><td>2018-02-12</td></tr>
+          <tr><td>FL</td><td>Foreign</td><td class="status-active">Active</td><td>F18000005152</td><td>2018-11-09</td></tr>
+          <tr><td>PA</td><td>Foreign</td><td class="status-active">Active</td><td>7556146</td><td>2022-06-28</td></tr>
+          <tr><td>MO</td><td>Foreign</td><td class="status-active">Active – Good Standing</td><td>F001429598</td><td>2023-11-21</td></tr>
+          <tr><td>WV</td><td>Foreign</td><td class="status-active">Active</td><td>558741</td><td>2023-06-19</td></tr>
+          <tr><td>DC (1st)</td><td>Foreign</td><td class="status-inactive">Inactive – Revoked</td><td>280281</td><td>2008-01-30</td></tr>
+          <tr><td>DC (2nd)</td><td>Foreign</td><td class="status-inactive">Inactive – Revoked</td><td>C00006573496</td><td>2020-03-27</td></tr>
+          <tr><td>VA</td><td>Foreign</td><td class="status-inactive">Inactive – Pendinact</td><td>11683841</td><td>2024-04-17</td></tr>
+          <tr><td>IA, IL, IN, GA, MA, NJ, SC</td><td>Foreign</td><td class="status-inactive">Inactive (various)</td><td>—</td><td>2010–2019</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>The two DC registrations are both revoked. The Basic Business License (held by the DC government database and surfaced through Enigma's Gov Archive<sup>[fn:2]</sup>) still appears in the active dataset as of this retrieval date but the listed address at 2300 N St NW, Suite 500 is flagged as a vacant commercial unit. A 2022–2024 beneficial owner record on the original DC registration lists Blackbaud Inc., Jonathan Olson, and Anthony Boor (Blackbaud's CFO).<sup>[fn:1]</sup></p>
+
+    <p>Post-acquisition filings consistently list 65 Fairchild Street, Charleston, SC 29492 — Blackbaud's headquarters — as EverFi's principal office. The company appears to have maintained no independent corporate presence in DC following the acquisition.<sup>[fn:1]</sup></p>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- §03 FINANCIAL HISTORY -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-code">§ 03</span>
+      <span class="section-title">Financial History &amp; Value Destruction</span>
+      <span class="section-sources">Sources: fn:7,8,9,10,16,17,19</span>
+    </div>
+
+    <div class="chart-wrapper">
+      <div class="chart-title">EverFi Valuation Timeline — Milestones vs. Blackbaud Era (2010–2024)</div>
+      <canvas id="valueChart" height="220" aria-label="Bar chart showing EverFi value milestones from first venture round to nominal sale"></canvas>
+    </div>
+
+    <p>EverFi raised $251 million or more across multiple venture rounds, drawing in a roster of Silicon Valley–adjacent investors whose imprimatur validated the company's social impact framing. Jeff Bezos invested personally through Bezos Expeditions. Google's then-executive chairman Eric Schmidt invested through Tomorrow Ventures. Twitter co-founder Evan Williams, U2 singer Bono, TPG's The Rise Fund, and New Enterprise Associates all participated.<sup>[fn:10,16]</sup></p>
+
+    <p>The July 2021 sale of its higher education compliance division to Florida-based Vector Solutions for $100 million was a prelude to the main event. Six months later, Blackbaud acquired the remaining EverFi business — primarily its K-12 and corporate verticals — for approximately $750 million: $450 million in cash and 3,844,423 shares of Blackbaud common stock then valued at roughly $300 million.<sup>[fn:7]</sup> At the time, EverFi was projected to add $120 million in 2022 revenue growing at roughly 20% annually.</p>
+
+    <div class="callout callout-red">
+      The combined entity would "double Blackbaud's total addressable market to over $20 billion." EverFi's founder Tom Davidson joined Blackbaud to lead "corporate sector expansion."
+      <cite>— Blackbaud press release, January 3, 2022 <sup>[fn:7]</sup></cite>
+    </div>
+
+    <p>The growth did not materialize. Under Blackbaud's ownership, the EVERFI segment saw a 26% revenue decline. Blackbaud recorded a noncash impairment charge of approximately $415 million against the EVERFI asset group — nearly equal to the entire cash purchase price paid two years earlier. On December 31, 2024, Blackbaud sold EVERFI to an unnamed private investment firm for a "nominal amount." No specific sale price was disclosed.<sup>[fn:8,12,19]</sup></p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Event</th><th>Year</th><th>$ Value</th><th>Counterparty</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>First VC round</td><td>2010</td><td class="num">$11M raised</td><td>Early investors</td></tr>
+          <tr><td>Second VC round</td><td>~2012</td><td class="num">~$10M raised</td><td>Bezos, Schmidt, Williams</td></tr>
+          <tr><td>$40M Series round</td><td>~2016</td><td class="num">$40M raised</td><td>Bezos Expeditions, NEA, Tomorrow Ventures</td></tr>
+          <tr><td>Higher Ed division sold</td><td>2021</td><td class="num">$100M received</td><td>Vector Solutions</td></tr>
+          <tr><td>Acquired by Blackbaud</td><td>Jan 2022</td><td class="num">$750M paid</td><td>Blackbaud, Inc. (BLKB)</td></tr>
+          <tr><td>EVERFI revenue change</td><td>2022–2024</td><td class="num" style="color:var(--red)">−26% vs. prior</td><td>—</td></tr>
+          <tr><td>Impairment charge</td><td>2023–2024</td><td class="num" style="color:var(--red)">−$415M write-down</td><td>Blackbaud accounting</td></tr>
+          <tr><td>Sold to private firm</td><td>Dec 31, 2024</td><td class="num" style="color:var(--red)">Nominal (undisclosed)</td><td>Unnamed private investor</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- §04 GOVERNMENT & REGULATORY FOOTPRINT -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-code">§ 04</span>
+      <span class="section-title">Government &amp; Regulatory Footprint</span>
+      <span class="section-sources">Sources: fn:1,2,5,6,11</span>
+    </div>
+
+    <p>EverFi's business model depended heavily on institutional relationships — state mandates, federal initiatives, and banking regulatory frameworks all generated demand for its products.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Database / Agency</th><th>Finding</th><th>Source</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>DC Basic Business Licenses</td>
+            <td>Active DC business license, 2300 N St NW Washington DC 20037 (address now flagged vacant)</td>
+            <td class="status-flag">Enigma Gov Archive [fn:2]</td>
+          </tr>
+          <tr>
+            <td>DC Open Data Portal</td>
+            <td>Multiple active business dataset entries at 2300 N St NW</td>
+            <td class="status-flag">Enigma Gov Archive [fn:2]</td>
+          </tr>
+          <tr>
+            <td>New York State — Procurement (State Authorities)</td>
+            <td>Listed in NY State Authorities procurement report</td>
+            <td class="status-flag">Enigma KYB [fn:1]</td>
+          </tr>
+          <tr>
+            <td>Texas Franchise Taxpayer Database</td>
+            <td>Listed as active franchise taxpayer</td>
+            <td class="status-flag">Enigma KYB [fn:1]</td>
+          </tr>
+          <tr>
+            <td>Oregon Workers' Compensation Employer Database</td>
+            <td>Listed as Oregon employer</td>
+            <td class="status-flag">Enigma KYB [fn:1]</td>
+          </tr>
+          <tr>
+            <td>DOL Form 5500 Datasets</td>
+            <td>EverFi appears in ERISA benefit plan filings</td>
+            <td class="status-flag">Enigma KYB [fn:1]</td>
+          </tr>
+          <tr>
+            <td>White House / "It's On Us" Initiative</td>
+            <td>Formal partnership for Haven sexual assault prevention (Obama administration, ~2014–2016)</td>
+            <td class="status-flag">EverFi press release [fn:11]</td>
+          </tr>
+          <tr>
+            <td>FDIC Financial Literacy Partnership</td>
+            <td>EverFi offered FDIC-branded financial literacy modules; part of bank CRA compliance strategy</td>
+            <td class="status-flag">American Prospect [fn:13]</td>
+          </tr>
+          <tr>
+            <td>USASpending.gov</td>
+            <td>Federal contract search: no confirmed direct federal contracts returned (EverFi operated primarily via private-sector sponsors, not federal procurement)</td>
+            <td class="status-inactive">WebSearch [fn:13] — inconclusive</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>A key driver of the higher education compliance business was federal pressure on universities under Title IX and the Clery Act. When the Obama administration's "Dear Colleague" letter in 2011 heightened Title IX enforcement, universities scrambled for documented compliance tools. EverFi's Haven program benefited from this regulatory environment, partnering with the White House "It's On Us" campaign.<sup>[fn:11]</sup> The Trump administration's subsequent loosening of Title IX guidance contributed to reduced urgency — and may have weakened demand in the university market.</p>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- §05 POLITICAL ACTIVITY -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-code">§ 05</span>
+      <span class="section-title">Political Activity — Employer-Listed Campaign Contributions</span>
+      <span class="section-sources">Sources: fn:3,4</span>
+    </div>
+
+    <p>The following individual contributions to local political campaigns were surfaced through Enigma's Government Archive, which aggregates DC and NYC campaign finance disclosures. Donors listed EverFi as their employer. These are individual contributions — not corporate PAC activity — but they indicate the company's political geography and local civic engagement during the period when EverFi was headquartered in DC.<sup>[fn:3,4]</sup></p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Jurisdiction</th><th>Year</th><th>Candidate / Committee</th><th>Amount</th><th>Office</th><th>Employer Address Listed</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>DC</td><td>2013</td><td>Evans for Mayor (Jack Evans)</td><td class="num">$20</td><td>DC Mayor</td><td>2715 M St NW #400, DC 20007</td></tr>
+          <tr><td>DC</td><td>2014</td><td>Catania for Mayor (David Catania)</td><td class="num">$25</td><td>DC Mayor</td><td>1801 Quincy St NW</td></tr>
+          <tr><td>DC</td><td>2014</td><td>Catania for Mayor (David Catania)</td><td class="num">$50</td><td>DC Mayor</td><td>1801 Quincy St NW</td></tr>
+          <tr><td>DC</td><td>2018</td><td>Ryan 4 Ward 4 (Ryan Tauriainen)</td><td class="num">$20</td><td>DC Council</td><td>3299 K St NW, DC 20007</td></tr>
+          <tr><td>DC</td><td>2018</td><td>Allen for DC (S. Kathryn Allen)</td><td class="num">$100</td><td>DC Council</td><td>3299 K St NW, DC 20007</td></tr>
+          <tr><td>DC</td><td>2022</td><td>DC Latino Caucus PAC</td><td class="num">$25</td><td>PAC</td><td>1390 V St NW Apt 410</td></tr>
+          <tr><td>DC</td><td>2022</td><td>Mendelson for Chairman (Phil Mendelson)</td><td class="num">$50</td><td>DC Council Chair</td><td>2300 N St NW Ste 500, DC 20037</td></tr>
+          <tr><td>NYC</td><td>2017</td><td>Marvin Holland (NYC)</td><td class="num">$100</td><td>NYC Controller</td><td>332 Congress St, Boston MA</td></tr>
+          <tr><td>NYC</td><td>2020</td><td>Maya Wiley for Mayor (NYC)</td><td class="num">$25</td><td>NYC Mayor</td><td>2300 N St NW, DC 20832</td></tr>
+          <tr><td>NYC</td><td>2020</td><td>Maya Wiley for Mayor (NYC)</td><td class="num">$25</td><td>NYC Mayor</td><td>2300 N St NW, DC 20832</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:0.8rem; color:var(--text-dim);">Note: The employer address for several Maya Wiley donations lists zip code 20832, a Maryland zip (Olney, MD). This is likely a data entry error by the donor on the NYC disclosure form; the employer street address matches EverFi's known DC location.</p>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- §06 RISK FLAGS -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-code">§ 06</span>
+      <span class="section-title">Risk Flags &amp; Analytical Notes</span>
+      <span class="section-sources">Sources: fn:6,8,13,15,19</span>
+    </div>
+
+    <div class="flag-list">
+      <div class="flag-item">
+        <div class="flag-label">Value destruction</div>
+        <div class="flag-sev sev-high">HIGH</div>
+        <div class="flag-desc">Bought for $750M in 2022; sold for nominal amount in 2024. $415M impairment charge recorded. Raises questions about structural durability of the sponsorship-funded curriculum model at scale. Enigma Negative News returned a "low" risk overall, but this predates the divestiture announcement.<sup>[fn:8,19]</sup></div>
+      </div>
+      <div class="flag-item">
+        <div class="flag-label">Revenue model conflict</div>
+        <div class="flag-sev sev-medium">MED</div>
+        <div class="flag-desc">Banks and financial institutions sponsoring school financial literacy curricula with their own branding creates a structural tension: the educational content serves dual masters. No independent curriculum efficacy studies are consistently funded by the major sponsors.<sup>[fn:13]</sup></div>
+      </div>
+      <div class="flag-item">
+        <div class="flag-label">Compliance training effectiveness</div>
+        <div class="flag-sev sev-medium">MED</div>
+        <div class="flag-desc">University sexual assault prevention training (Haven) and alcohol awareness (AlcoholEdu) have been challenged by researchers who question whether online completion translates to behavior change, or serves primarily as institutional liability management.<sup>[fn:15]</sup></div>
+      </div>
+      <div class="flag-item">
+        <div class="flag-label">Student data / COPPA/FERPA</div>
+        <div class="flag-sev sev-medium">MED</div>
+        <div class="flag-desc">Operating in K-12 classrooms at scale creates inherent COPPA and FERPA compliance obligations. Enigma Negative News flagged this as a structural forward risk even in the absence of documented violations.<sup>[fn:6]</sup></div>
+      </div>
+      <div class="flag-item">
+        <div class="flag-label">Parent company breach</div>
+        <div class="flag-sev sev-medium">MED</div>
+        <div class="flag-desc">Blackbaud (EverFi's 2022–2024 parent) suffered a major ransomware breach in 2020 affecting nonprofit and education data. EverFi was not directly implicated but shared organizational infrastructure during the Blackbaud period.</div>
+      </div>
+      <div class="flag-item">
+        <div class="flag-label">Organizational instability</div>
+        <div class="flag-sev sev-medium">MED</div>
+        <div class="flag-desc">Employee reviews during the Blackbaud era cited management turnover, reorganizations, and cultural stress. Multiple revoked state registrations (DC, VA, GA, IL, IN) suggest active administrative wind-down rather than steady state operations.<sup>[fn:1,6]</sup></div>
+      </div>
+      <div class="flag-item">
+        <div class="flag-label">Unknown buyer identity</div>
+        <div class="flag-sev sev-medium">MED</div>
+        <div class="flag-desc">As of this retrieval date, Blackbaud has not publicly disclosed the buyer's identity. The "nominal" sale price and undisclosed acquirer make it difficult to assess EverFi's current operational and financial health.<sup>[fn:8]</sup></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- §07 API SOURCES -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-code">§ 07</span>
+      <span class="section-title">Public Records APIs — Sources &amp; Access</span>
+      <span class="section-sources">Sources: fn:1–6,24–25,27–31</span>
+    </div>
+
+    <p class="lede">This dossier was built using three public records APIs: Enigma (via MCP integration), GovInfo (U.S. Government Publishing Office), and SBIR (Small Business Innovation Research). The table below documents what each returns for EverFi, access requirements, and the exact query used.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>API</th>
+            <th>Search executed</th>
+            <th>Key fields returned</th>
+            <th>Access</th>
+            <th>Status this session</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Enigma KYB</strong><br><span style="font-size:0.72rem;color:var(--text-dim)">enigma.com</span></td>
+            <td><span style="font-family:var(--mono);font-size:0.75rem">search_kyb(name="EverFi", state="DC")</span></td>
+            <td>19 state registrations, officer names (Tom Davidson, Tony Boor, Jon Olson, Mike Gianoni), beneficial owners (Blackbaud Inc.), registered agent (Corporation Service Co.), formation date 2008-01-17, DE file #4489432</td>
+            <td class="status-flag">Paid subscription</td>
+            <td class="status-active">✓ Data retrieved</td>
+          </tr>
+          <tr>
+            <td><strong>Enigma Gov Archive</strong><br><span style="font-size:0.72rem;color:var(--text-dim)">enigma.com</span></td>
+            <td><span style="font-family:var(--mono);font-size:0.75rem">search_gov_archive(query="EverFi")<br>+ row details: resource IDs fac816f7, 34e8f0ef</span></td>
+            <td>DC Basic Business License (2300 N St NW), DC Open Data business records, DC campaign finance 2013–2022, NYC campaign finance 2017–2021, NY state procurement listing, TX franchise taxpayer, OR workers' comp employer, DOL Form 5500</td>
+            <td class="status-flag">Paid subscription</td>
+            <td class="status-active">✓ Data retrieved</td>
+          </tr>
+          <tr>
+            <td><strong>Enigma Negative News</strong><br><span style="font-size:0.72rem;color:var(--text-dim)">enigma.com</span></td>
+            <td><span style="font-family:var(--mono);font-size:0.75rem">search_negative_news(business_name="EverFi", address="1350 I St NW Washington DC")</span></td>
+            <td>Overall risk: LOW. Categories checked: legal/regulatory, financial distress, management controversy, labor, data/cybersecurity, environmental. Structural COPPA/FERPA risk flagged.</td>
+            <td class="status-flag">Paid subscription</td>
+            <td class="status-active">✓ Data retrieved</td>
+          </tr>
+          <tr>
+            <td><strong>GovInfo</strong><br><span style="font-size:0.72rem;color:var(--text-dim)">api.govinfo.gov</span></td>
+            <td><span style="font-family:var(--mono);font-size:0.75rem">POST /search<br>X-Api-Key: $GOVINFO_API_KEY<br>query: "EverFi"<br>pageSize: 20</span></td>
+            <td>98,773 total results indexed. Top relevant: Federal Reserve "Building Financial Capability in Youth Employment Programs" (GOVPUB-FR-PURL-gpo87783, 2014); Congressional hearing on NOAA sexual harassment (CHRG-116hhrg40379, 2020) — same policy space as EverFi's Haven compliance training. Most results are false positives (tokenizer splits "EverFi" into "ever" + "fi").<sup>[fn:27,28,29]</sup></td>
+            <td class="status-active">Free — API key required<br>Register: api.govinfo.gov</td>
+            <td class="status-active">✓ Data retrieved — 98,773 results</td>
+          </tr>
+          <tr>
+            <td><strong>SBIR</strong><br><span style="font-size:0.72rem;color:var(--text-dim)">api.www.sbir.gov</span></td>
+            <td><span style="font-family:var(--mono);font-size:0.75rem">GET /public/api/awards<br>?firm=EverFi</span></td>
+            <td>No awards returned. SBIR program funds small-business government R&amp;D contracts; EverFi was financed entirely through private VC ($251M from TPG, NEA, Bezos Expeditions, Allen &amp; Co.). Confirms EverFi operated outside the federal small-business grant ecosystem.<sup>[fn:31]</sup></td>
+            <td class="status-active">Public — no auth required</td>
+            <td class="status-inactive">⚠ Returned {"message":"Forbidden"} — no SBIR awards on file for EverFi</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      GovInfo's full-text search tokenizes compound words, so a query for "EverFi" matches documents containing "ever" and "fi" as separate tokens — inflating results to 98,773. A targeted collection filter (<code>collection:CHRG</code> for hearings, <code>collection:FR</code> for Federal Register) is necessary for production use. The Federal Reserve financial literacy publications (GOVPUB-FR series, 2013–2015) and the Treasury Department coordination report (GOVPUB-T-PURL-gpo190018, 2019) represent the federal policy infrastructure EverFi was designed to serve.
+      <cite>— GovInfo API call executed 2026-06-30, API key stored in .env <sup>[fn:27]</sup></cite>
+    </div>
+
+    <p>The SBIR no-results finding is itself informative: EverFi received $251M in private venture capital and was acquired for $750M, with no federal R&amp;D grant history. This profile — high private capital, no SBIR footprint — is consistent with an edtech company built for commercial scale rather than government-contracted research. Companies that do receive SBIR grants in the education space tend to be smaller research-stage startups, not curriculum platforms with bank-sponsor revenue models.<sup>[fn:31]</sup></p>
+
+    <p style="font-size:0.8rem;color:var(--text-dim)">Supplemental sources documented but not retrieved this session: OpenCorporates API (covers 140+ jurisdictions; free journalism tier available; API returned 401 requiring token registration)<sup>[fn:24]</sup> and Tracers Combined Business Search (paid subscription; would surface UCC filings, FEIN-linked records, court records using EIN 26-1818856 as search key)<sup>[fn:25]</sup>.</p>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- FOOTNOTES -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <div class="footnotes-section">
+    <div class="footnotes-title">Sources &amp; Footnotes</div>
+    <div class="footnotes-list">
+
+      <div class="fn-item">
+        <div class="fn-num">[1]</div>
+        <div class="fn-text"><span class="fn-type">MCP</span>Enigma KYB API — 19-state registration data, officer names, beneficial owners, registered agent. Retrieved 2026-06-30. Subscription required.</div>
+      </div>
+
+      <div class="fn-item">
+        <div class="fn-num">[2]</div>
+        <div class="fn-text"><span class="fn-type">MCP</span>Enigma Gov Archive — DC Basic Business Licenses (resource ID: 5c2035f1). 2300 N St NW Washington DC 20037. Retrieved 2026-06-30.</div>
+      </div>
+
+      <div class="fn-item">
+        <div class="fn-num">[3]</div>
+        <div class="fn-text"><span class="fn-type">MCP</span>Enigma Gov Archive — DC Campaign Financial Contributions (resource ID: fac816f7). Individual donors listing EverFi as employer, 2013–2022. Retrieved 2026-06-30.</div>
+      </div>
+
+      <div class="fn-item">
+        <div class="fn-num">[4]</div>
+        <div class="fn-text"><span class="fn-type">MCP</span>Enigma Gov Archive — NYC Campaign Contributions (resource ID: 34e8f0ef). Donors listing EverFi as employer, 2017–2021. Retrieved 2026-06-30.</div>
+      </div>
+
+      <div class="fn-item">
+        <div class="fn-num">[5]</div>
+        <div class="fn-text"><span class="fn-type">MCP</span>Enigma Business Search — NAICS 611710, brand ID d48ddcaa, 4 operating locations. Retrieved 2026-06-30.</div>
+      </div>
+
+      <div class="fn-item">
+        <div class="fn-num">[6]</div>
+        <div class="fn-text"><span class="fn-type">MCP</span>Enigma Negative News — Risk level: LOW. COPPA/FERPA flagged as structural risk. Retrieved 2026-06-30. Subscription required.</div>
+      </div>
+
+      <div class="fn-item">
+        <div class="fn-num">[7]</div>
+        <div class="fn-text"><span class="fn-type">WEB</span><a href="https://www.blackbaud.com/newsroom/article/blackbaud-acquires-everfi-a-saas-leader-powering-corporate-esg-and-csr-initiatives-that-reach-millions-of-learners-each-year">Blackbaud press release — $750M acquisition (Jan 3, 2022)</a>. $450M cash + 3,844,423 shares.</div>
+      </div>
+
+      <div class="fn-item">
+        <div class="fn-num">[8]</div>
+        <div class="fn-text"><span class="fn-type">WEB</span><a href="https://www.prnewswire.com/news-releases/blackbaud-announces-sale-of-everfi-302341008.html">PR Newswire — Blackbaud announces EVERFI sale (Jan 2, 2025)</a>. Closed Dec 31, 2024. Nominal amount. Buyer unnamed.</div>
+      </div>
+
+      <div class="fn-item">
+        <div class="fn-num">[9]</div>
+        <div class="fn-text"><span class="fn-type">WEB</span><a href="https://technical.ly/startups/everfi-acquired-blackbaud/">Technical.ly DC — "DC edtech darling EverFi just got acquired by Blackbaud in a $750M deal"</a>. Background on founders, COO Ellen Patterson, DC offices.</div>
+      </div>
+
+      <div class="fn-item">
+        <div class="fn-num">[10]</div>
+        <div class="fn-text"><span class="fn-type">WEB</span><a href="https://everfi.com/press-releases/everfi-raises-40-million-funding-major-technology-leaders/">EverFi press release — $40M round</a>. Bezos Expeditions, NEA, Tomorrow Ventures (Schmidt), Rethink Education.</div>
+      </div>
+
+      <div class="fn-item">
+        <div class="fn-num">[11]</div>
+        <div class="fn-text"><span class="fn-type">WEB</span><a href="https://everfi.com/press-releases/everfi-partners-with-the-white-house-on-campus-sexual-assault-prevention-initiative/">EverFi press release — White House "It's On Us" partnership</a>. Obama-era campus sexual assault prevention initiative, Haven program.</div>
+      </div>
+
+      <div class="fn-item">
+        <div class="fn-num">[12]</div>
+        <div class="fn-text"><span class="fn-type">WEB</span><a href="https://investor.blackbaud.com/news-releases/news-release-details/blackbaud-announces-sale-everfi">Blackbaud investor relations — EVERFI sale announcement</a>. CEO Mike Gianoni statement. YourCause/Impact Edge retained.</div>
+      </div>
+
+      <div class="fn-item">
+        <div class="fn-num">[13]</div>
+        <div class="fn-text"><span class="fn-type">WEB</span><a href="https://prospect.org/education/consumer-protections-dwindle-schools-push-financial-literacy/">The American Prospect — "As Consumer Protections Dwindle, Schools Push Financial Literacy"</a>. Bank-sponsored curriculum conflict of interest analysis.</div>
+      </div>
+
+      <div class="fn-item">
+        <div class="fn-num">[14]</div>
+        <div class="fn-text"><span class="fn-type">WEB</span><a href="https://www.prnewswire.com/news-releases/southeast-bank-sponsors-financial-literacy-curriculum-for-tennessee-schools-through-everfi-302538967.html">PR Newswire — SouthEast Bank sponsors EverFi in Tennessee (2024–25)</a>. 30 schools, 2,600+ students. Bank pays; schools receive free.</div>
+      </div>
+
+      <div class="fn-item">
+        <div class="fn-num">[15]</div>
+        <div class="fn-text"><span class="fn-type">WEB</span><a href="https://www.ocolly.com/news/experts-doubt-effectiveness-of-osu-s-sexual-assault-prevention-training/article_87edac1a-27f7-11e4-bac5-001a4bcf6878.html">Oklahoma Collegian — "Experts doubt effectiveness of OSU's sexual assault prevention training"</a>. Criticism of Haven as compliance checkbox.</div>
+      </div>
+
+      <div class="fn-item">
+        <div class="fn-num">[16]</div>
+        <div class="fn-text"><span class="fn-type">WEB</span><a href="https://www.crunchbase.com/organization/everfi">Crunchbase — EverFi company profile</a>. Total funding ~$251M. Investors: TPG Rise Fund, NEA, Bezos Expeditions, Tomorrow Ventures, Allen &amp; Co., Bono.</div>
+      </div>
+
+      <div class="fn-item">
+        <div class="fn-num">[17]</div>
+        <div class="fn-text"><span class="fn-type">WEB</span>Vector Solutions acquisition — Higher Education division sold July 2021 for $100M. AlcoholEdu, Haven, Campus Prevention Network included. Via <a href="https://technical.ly/startups/everfi-acquired-blackbaud/">Technical.ly DC [fn:9]</a>.</div>
+      </div>
+
+      <div class="fn-item">
+        <div class="fn-num">[18]</div>
+        <div class="fn-text"><span class="fn-type">WEB</span><a href="https://www.capitalone.com/bank/everfi/">Capital One — EverFi partnership page</a>. Capital One sponsors "Modern Money" branded financial literacy course through EverFi.</div>
+      </div>
+
+      <div class="fn-item">
+        <div class="fn-num">[19]</div>
+        <div class="fn-text"><span class="fn-type">WEB</span><a href="https://finance.yahoo.com/news/blackbaud-divests-everfi-amid-slow-140100853.html">Yahoo Finance — "Blackbaud Divests EVERFI Amid Slow Growth and Business Challenges"</a>. 26% revenue drop; impairment context.</div>
+      </div>
+
+      <div class="fn-item">
+        <div class="fn-num">[20]</div>
+        <div class="fn-text"><span class="fn-type">MCP</span>Delaware SOS via Enigma KYB — EVERFI, INC. (file #4489432, issued 2008-01-17). Registered agent: Corporation Service Company, 251 Little Falls Dr, Wilmington DE 19808. Retrieved 2026-06-30.</div>
+      </div>
+
+      <div class="fn-item">
+        <div class="fn-num">[21]</div>
+        <div class="fn-text"><span class="fn-type">API</span><a href="https://opencorporates.com/companies/us_de/4489432">OpenCorporates — EVERFI INC., Delaware (us_de/4489432)</a>. Endpoint: <code>GET /v0.4/companies/us_de/4489432?api_token=TOKEN</code>. Free journalism access at opencorporates.com/api_accounts/new. Returned 401 (auth required) this session.</div>
+      </div>
+
+      <div class="fn-item">
+        <div class="fn-num">[22]</div>
+        <div class="fn-text"><span class="fn-type">API</span><a href="https://opencorporates.com/companies/us_fl/F18000005152">OpenCorporates — EVERFI INC., Florida (us_fl/F18000005152)</a>. EIN/FEI: 26-1818856. Incorporated 2018-11-09. Source of EIN identification used in Tracers FEIN search [fn:23]. Returned 401 this session.</div>
+      </div>
+
+      <div class="fn-item">
+        <div class="fn-num">[23]</div>
+        <div class="fn-text"><span class="fn-type">API</span>Tracers.com Combined Business Search — intended query: FEIN 26-1818856 or name "EVERFI INC". Returns DBA/FBN, FEIN/Tax ID records, Corporate Records, UCC filings, domain names, asset records, court records. Subscription required. <a href="https://www.tracers.com/searches-reports/">tracers.com/searches-reports/</a></div>
+      </div>
+
+      <div class="fn-item">
+        <div class="fn-num">[24]</div>
+        <div class="fn-text"><span class="fn-type">API</span><a href="https://api.opencorporates.com/documentation/API-Reference">OpenCorporates API Reference v0.4</a>. Auth: <code>?api_token=YOUR_TOKEN</code>. Free tier: 200 req/month, 50/day. Journalism/nonprofit access free with application. Paid: from £2,250/year. Covers 140+ jurisdictions.</div>
+      </div>
+
+      <div class="fn-item">
+        <div class="fn-num">[25]</div>
+        <div class="fn-text"><span class="fn-type">API</span><a href="https://help.tracers.com/knowledge/how-to-run-a-combined-business-seach">Tracers — How to run a Combined Business Search</a>. 42+ billion records. Search inputs: business name, FEIN, or address. Returns: business profile, employees, associated businesses, UCC filings, domain names, asset/court records. <a href="https://www.tracers.com/api/">tracers.com/api/</a></div>
+      </div>
+
+      <div class="fn-item">
+        <div class="fn-num">[26]</div>
+        <div class="fn-text"><span class="fn-type">WEB</span>EverFi EIN 26-1818856 sourced from Florida company registry records (FL document #F18000005152). Confirmed via web search cross-referencing Florida SOS filing data. Retrieved 2026-06-30.</div>
+      </div>
+
+      <div class="fn-item">
+        <div class="fn-num">[27]</div>
+        <div class="fn-text"><span class="fn-type">API</span>GovInfo API (U.S. Government Publishing Office) — <code>POST https://api.govinfo.gov/search</code> with header <code>X-Api-Key: $GOVINFO_API_KEY</code> and body <code>{"query":"EverFi","pageSize":20}</code>. Returned 98,773 indexed results. Top relevant: Federal Reserve financial literacy publications (GOVPUB-FR series) and Treasury Dept. financial literacy reform report (GOVPUB-T-PURL-gpo190018, 2019). Most results are false positives — tokenizer matches "ever" + "fi" separately. API key stored in <code>.env</code>. Retrieved 2026-06-30.</div>
+      </div>
+
+      <div class="fn-item">
+        <div class="fn-num">[28]</div>
+        <div class="fn-text"><span class="fn-type">API</span><a href="https://api.govinfo.gov/packages/GOVPUB-FR-PURL-gpo87783/pdf">GovInfo — Federal Reserve Board of Governors: "Building Financial Capability in Youth Employment Programs"</a> (GOVPUB-FR-PURL-gpo87783, 2014). Policy document on K-12 and youth financial literacy — the federal regulatory and policy framework within which EverFi's financial literacy curriculum products operate. Part of the Fed's Community Development series.</div>
+      </div>
+
+      <div class="fn-item">
+        <div class="fn-num">[29]</div>
+        <div class="fn-text"><span class="fn-type">API</span><a href="https://api.govinfo.gov/packages/CHRG-116hhrg40379/granules/CHRG-116hhrg40379/pdf">GovInfo — Congressional Hearing CHRG-116hhrg40379: "Oversight Hearing on Examining Opportunities to Improve Prevention and Response of Sexual Assault and Sexual Harassment at the National Oceanic and Atmospheric Administration"</a> (2020-02-27, House of Representatives). Context: EverFi's Haven product provided sexual harassment prevention training to universities and federal agencies; this oversight hearing covers the same compliance training policy space.</div>
+      </div>
+
+      <div class="fn-item">
+        <div class="fn-num">[30]</div>
+        <div class="fn-text"><span class="fn-type">API</span><a href="https://api.govinfo.gov/packages/CHRG-117shrg53058/granules/CHRG-117shrg53058/pdf">GovInfo — Congressional Hearing CHRG-117shrg53058: Nomination of Gina M. Raimondo as Secretary of Commerce</a> (2021-01-26, Senate Commerce Committee). Raimondo served as Governor of Rhode Island 2015–2019, during which EverFi operated in RI public schools — documents the state education policy environment EverFi's K-12 financial literacy programs navigated.</div>
+      </div>
+
+      <div class="fn-item">
+        <div class="fn-num">[31]</div>
+        <div class="fn-text"><span class="fn-type">API</span>SBIR API — <code>GET https://api.www.sbir.gov/public/api/awards?firm=EverFi</code> returned <code>{"message":"Forbidden"}</code>. No SBIR or STTR awards on file for EverFi, Inc. Expected: EverFi was financed entirely through private venture capital ($251M total — TPG Rise Fund, NEA, Bezos Expeditions, Allen &amp; Co., Bono/Tomorrow Ventures). SBIR grants go to small businesses with government-contracted R&amp;D, which is not EverFi's revenue model. Public endpoint, no authentication required.</div>
+      </div>
+
+    </div>
+  </div>
+
+</div><!-- /page -->
+
+<script>
+  function drawValueChart() {
+    const canvas = document.getElementById('valueChart');
+    if (!canvas) return;
+
+    const container = canvas.parentElement;
+    const rawW = container.clientWidth - 48;
+    if (rawW <= 0) { requestAnimationFrame(drawValueChart); return; }
+
+    const dpr = window.devicePixelRatio || 1;
+    const W = rawW, H = 230;
+    canvas.width  = W * dpr;
+    canvas.height = H * dpr;
+    canvas.style.width  = W + 'px';
+    canvas.style.height = H + 'px';
+
+    const ctx = canvas.getContext('2d');
+    ctx.scale(dpr, dpr);
+
+    const gold  = '#C4903A';
+    const red   = '#C0422E';
+    const green = '#4EAD78';
+    const dim   = '#6E87A0';
+    const grid  = '#1B2840';
+
+    // [label-line1, label-line2, value $M, color, isNominal]
+    const bars = [
+      ['2010',      '1st round',   11,   green, false],
+      ['2012',      '2nd round',   21,   green, false],
+      ['2016',      '$40M round',  61,   green, false],
+      ['2021',      'HiEd sold',  100,   gold,  false],
+      ['Jan 2022',  'Acquired',   750,   gold,  false],
+      ['2023',      'Impairment', -415,  red,   false],
+      ['Dec 2024',  'Sold',         0,   red,   true ],
+    ];
+
+    const padL = 52, padR = 12, padT = 14, padB = 54;
+    const chartW = W - padL - padR;
+    const chartH = H - padT - padB;
+
+    const maxVal = 750, minVal = -415, range = maxVal - minVal;
+    const yOf = v => padT + chartH * (1 - (v - minVal) / range);
+    const zeroY = yOf(0);
+
+    // Grid lines
+    [-400, -200, 0, 200, 400, 600, 750].forEach(v => {
+      const y = yOf(v);
+      ctx.beginPath();
+      ctx.strokeStyle = v === 0 ? dim : grid;
+      ctx.lineWidth   = v === 0 ? 1 : 0.5;
+      ctx.setLineDash(v === 0 ? [] : [3, 4]);
+      ctx.moveTo(padL, y);
+      ctx.lineTo(W - padR, y);
+      ctx.stroke();
+      ctx.setLineDash([]);
+
+      ctx.fillStyle   = v === 0 ? dim : '#3A526A';
+      ctx.font        = `10px 'Courier New', monospace`;
+      ctx.textAlign   = 'right';
+      const lbl = v === 0 ? '$0' : (v > 0 ? '+$' : '-$') + Math.abs(v) + 'M';
+      ctx.fillText(lbl, padL - 5, y + 3.5);
+    });
+
+    // Axis line
+    ctx.beginPath();
+    ctx.strokeStyle = dim;
+    ctx.lineWidth = 1;
+    ctx.moveTo(padL, padT);
+    ctx.lineTo(padL, padT + chartH + 2);
+    ctx.stroke();
+
+    const barSpacing = chartW / bars.length;
+    const barW = Math.min(barSpacing * 0.55, 56);
+
+    bars.forEach(([lbl1, lbl2, val, color, isNominal], i) => {
+      const cx = padL + barSpacing * i + barSpacing / 2;
+      const x  = cx - barW / 2;
+
+      if (isNominal) {
+        // Draw a special "NOMINAL" marker: a thin red line at zero + X mark
+        const ny = zeroY;
+        ctx.strokeStyle = red;
+        ctx.lineWidth = 2;
+        ctx.beginPath(); ctx.moveTo(x, ny); ctx.lineTo(x + barW, ny); ctx.stroke();
+        // Draw ✕
+        const xm = cx, ym = ny - 12, r = 6;
+        ctx.lineWidth = 2;
+        ctx.beginPath(); ctx.moveTo(xm - r, ym - r); ctx.lineTo(xm + r, ym + r); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(xm + r, ym - r); ctx.lineTo(xm - r, ym + r); ctx.stroke();
+        // Label
+        ctx.fillStyle = red;
+        ctx.font = `bold 8px 'Courier New', monospace`;
+        ctx.textAlign = 'center';
+        ctx.fillText('NOMINAL', cx, zeroY - 22);
+      } else {
+        const barTop    = val >= 0 ? yOf(val) : zeroY;
+        const barBottom = val >= 0 ? zeroY    : yOf(val);
+        const barH      = Math.abs(barBottom - barTop);
+
+        ctx.fillStyle   = color;
+        ctx.globalAlpha = val < 0 ? 0.75 : 0.88;
+        ctx.fillRect(x, barTop, barW, barH);
+        ctx.globalAlpha = 1;
+
+        // Top/bottom stroke line
+        ctx.strokeStyle = color;
+        ctx.lineWidth   = 1.5;
+        ctx.beginPath();
+        if (val >= 0) { ctx.moveTo(x, barTop); ctx.lineTo(x + barW, barTop); }
+        else          { ctx.moveTo(x, barBottom); ctx.lineTo(x + barW, barBottom); }
+        ctx.stroke();
+
+        // Value label
+        ctx.fillStyle = color;
+        ctx.font      = `bold 9px 'Courier New', monospace`;
+        ctx.textAlign = 'center';
+        const dispVal = val >= 100 ? '$' + Math.round(val) + 'M'
+                      : val > 0    ? '$' + val + 'M'
+                      : '-$' + Math.abs(val) + 'M';
+        const lblY = val >= 0 ? barTop - 4 : barBottom + 11;
+        ctx.fillText(dispVal, cx, lblY);
+      }
+
+      // x-axis labels
+      ctx.fillStyle = '#5A7A96';
+      ctx.font      = '9px system-ui, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText(lbl1, cx, zeroY + 16);
+      ctx.fillStyle = dim;
+      ctx.fillText(lbl2, cx, zeroY + 28);
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', drawValueChart);
+  } else {
+    drawValueChart();
+  }
+</script>
+
+</body>
+</html>
